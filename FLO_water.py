@@ -1,13 +1,12 @@
 import os
 from datetime import datetime, timezone
 from pickle import TRUE
-import pprint
 import time
 
 import mysql.connector
 from pyflowater import PyFlo
 
-cnx = mysql.connector.connect(user='root', password=os.getenv('MYSQL_PASS3WORD', None),
+cnx = mysql.connector.connect(user='root', password=os.getenv('MYSQL_PASSWORD', None),
                               host='127.0.0.1',
                               database='FLO_water')
 cursor = cnx.cursor()
@@ -25,6 +24,7 @@ def adddata(flo):
     for location in locations:
         for device in location['devices']:
             id = device['id']
+            
             py_flo.get_real_time_listener(id,callback)
             deviceinfo = flo.device(id)
 
