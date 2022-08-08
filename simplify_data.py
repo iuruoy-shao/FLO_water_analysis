@@ -2,9 +2,9 @@ import csv
 from datetime import datetime
 import pandas as pd
 
-raw_data="/Users/Alina/Documents/FLO_water/7_29_22.csv"
-new_csv="/Users/Alina/Documents/FLO_water/train_data.csv"
-deduped_csv="/Users/Alina/Documents/FLO_water/dedupe_train_data.csv"
+raw_data="7_29_22.csv"
+new_csv="train_data.csv"
+deduped_csv="dedupe_train_data.csv"
 
 def remove_zeroes(raw_data,new_csv):
     with open(raw_data, newline="") as csvfile:
