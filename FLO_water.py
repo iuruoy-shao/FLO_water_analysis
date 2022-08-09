@@ -7,7 +7,7 @@ import mysql.connector
 from pyflowater import PyFlo
 
 cnx = mysql.connector.connect(user='root', password=os.getenv('MYSQL_PASSWORD', None),
-                              host='127.0.0.1',
+                              host='samplehost',
                               database='FLO_water')
 cursor = cnx.cursor()
 
